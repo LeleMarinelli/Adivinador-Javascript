@@ -3,28 +3,15 @@
 
 - 🔭 I’m currently working on [Purple Haze](https://purplehazevision.000webhostapp.com/)
 
-- 🌱 I’m currently learning **React Js**
+- 🌱 I’m currently learning **Backend developing**
 
 - 📫 How to reach me **leancymarinelli@gmail.com**
 
 - ⚡ Fun fact **I'm a fashion and textile designer. i worked as stylist and producer for several audiovisual proyects.**
 
-<h3 align="center"> 🧬 Purple Haze App 🧬 </h3>
+<h3 align="center"> 🎇 Mini Juego - Adivinador Online con Javascript 🎇 </h3>
 <p align="left"> 
-Este es un un ejemplo de tienda E-commerce, en este caso orientada a vender objetos, especificamente piedras.
-</br>
-Este proyecto, realizado con React Js necesita de las siguientes dependencias y librerias para funcionar:
-<ul>
-<li>React</li>
-<li>React Router</li>
-<li>React Icons</li>
-<li>Bootstrap</li>
-<li>Firebase</li>
-<li>Sass</li>
-<li>SweetAlert</li>
-<li>Formik</li>
-</ul>
-
+Este es un un ejemplo de mini juego de prueba realizado con Javascript.
 </p>
 
 <h3 align="left">Connect with me:</h3>
