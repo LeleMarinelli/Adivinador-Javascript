@@ -1,0 +1,37 @@
+@mixin letraBrillante($size, $colors) {
+  margin: 0;
+  color: #fff;
+  font-size: $size;
+
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 30px $colors, 0 0 70px $colors,
+    0 0 80px $colors, 0 0 100px $colors, 0 0 140px $colors;
+
+  text-transform: uppercase;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: $size * 2;
+    padding-bottom: 0.5em;
+  }
+}
+
+@mixin cuadroBrillante($colors) {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px $colors, 0 0 60px $colors,
+    0 0 60px $colors, 0 0 80px $colors, 0 0 100px $colors;
+}
+
+@mixin cuadroDialogo {
+  margin-top: 1em;
+  padding: 1em 1em 1em;
+  border: 0.3em inset rgb(201, 167, 122);
+  border-radius: 1em;
+
+  //   background-image: url("https://i.ibb.co/K54kdK9/marble-stone.jpg");
+  text-align: center;
+  display: flex;
+
+  @media (min-width: 768px) {
+    width: 55%;
+  }
+}

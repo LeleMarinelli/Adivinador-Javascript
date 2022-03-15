@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Bienvenido al adivinador Online!</title>
+</head>
+<body class="primerFondo" id="fondoBody">
+
+    
+
+<div id="cuadroPsico"></div>
+  
+<div class="main" id="main">
+        <!-- Primera Pantalla   -->
+        <div class="chauChau" id="primeraPantalla">
+        
+            <h2>Esta es la cueva del adivino</h2>
+            <p id="pPrimeraPantalla">Antes de entrar es necesario que nos digas tu edad</p>
+
+            <div class="inputPrimerPantalla">
+            <input id="preguntaEdad" type="number">
+            <button id="botonEdad" type="submit">Ok !</button>
+            </div>
+
+        </div>
+
+        <button id="botonSalir" class="chauChau" type="submit">Escapar de aquí</button>
+
+        <div id="clockdate">
+            <div class="clockdate-wrapper">
+                <div id="clock"></div>
+                <div id="date"></div>
+            </div>
+        </div>
+        
+        <div id="cuadroNube"><button id="botonCerrarNube" class="botonContinuar" type="submit">Ok!</button></div>
+
+        
+
+
+        <!-- Segunda Pantalla   -->
+        <div class="chauChau" id="segundaPantalla">
+
+            <p class="dialogo" id="cuadroTopLampara">Dentro de la cueva has encontrado la lampara del genio.. Que vas a hacer?</p>
+
+            <div class="cuadroLampara" id="cuadroLampara">
+                <img class="lampara" id="lampara" src="images/lamp.png" alt="Lampara de Aladdin">
+
+                <ul id="listaOpciones">
+                    <li>Observar</li>
+                    <li>Abrir</li>
+                    <li>Frotar</li>
+                    <li>No tocar</li>
+                </ul>
+            </div>
+            <!-- Accion del usuario para pedir consulta  -->
+            <form>
+                <input id="accionUsuario" type="text">
+                <button id="botonPrimeraPregunta" type="submit">Que vas a hacer?</button>
+            </form>
+
+            <h1 id="tituloAdivina">Adivina tu futuro online</h1>
+
+            <p id="cuadroSuperior" class="dialogo">Descubre algo de tu pasado, presente o futuro con este sencillo metodo online. <span>&#160</span> </p>
+        
+        </div>
+        
+
+        <div class="chauChau" id="pantallaEmergente">
+               
+                <p>Nombre:</p> <input id="preguntaNombre" type="text">
+                <p>Apellido:</p> <input id="preguntaApellido" type="text">
+                <button id="botonContinuar" class="chauChau" type="submit">Next...</button>
+        
+        </div>
+
+
+        <div class="chauChau" id="preguntaColor">
+        
+            <p>De los siguientes colores cual te llama la atención?</p> 
+            <select name="Opciones" id="datoColor">
+                <option value="1">Rojo</option>
+                <option value="2">Negro</option>
+                <option value="3">Plateado</option>
+                <option value="4">Atigrado</option>
+                <option value="5">Verde</option>
+                <option value="6">Purpura</option>            
+            </select>
+            <button id="botonColor" class="botonContinuar" type="submit">Next...</button>
+            
+        </div>
+
+        <div class="chauChau" id="preguntaCalle">
+        
+            <p>¿¿¿ Consideras que pasas mucho tiempo en la calle ???</p>
+            <button id="botonCalleSi" class="botonSi" type="submit">Si</button>
+            <button id="botonCalleNo" class="botonContinuar" type="submit">No</button>
+
+        </div>
+
+        <div class="chauChau" id="preguntaAlcohol">
+        
+            <p>¿¿¿ Sos de tomar bebidas alcoholicas ???</p>
+            <button id="botonAlcoholSi" class="botonSi" type="submit">Si</button>
+            <button id="botonAlcoholNo" class="botonContinuar" type="submit">No</button>
+        
+        </div>
+
+        <div class="chauChau" id="preguntaDeporte">
+        
+            <p>¿¿¿ Dirias que haces actividad fisica ???</p>
+            <button id="botonDeporteSi" class="botonSi" type="submit">Si</button>
+            <button id="botonDeporteNo" class="botonContinuar" type="submit">No</button>
+        
+        </div>
+
+        <div class="chauChau" id="preguntaMascota">
+        
+            <p>¿¿¿ Convives con alguna mascota ???</p>
+            <button id="botonMascotaSi" class="botonSi" type="submit">Si</button>
+            <button id="botonMascotaNo" class="botonContinuar" type="submit">No</button>
+        
+        </div>
+
+        <div class="chauChau" id="preguntaMascota2">
+        
+            <p>Con que especie de mascota convives ???</p>
+            <select name="opcionesMascota" id="datoMascota">
+                <option value="1">Perro</option>
+                <option value="2">Gato</option>
+                <option value="3">Aves</option>
+                <option value="4">Roedores</option>
+                <option value="5">Peces</option>
+            </select>
+            <button id="botonTipoMascota" class="botonContinuar" type="submit">Next...</button>
+        
+        </div>
+
+        <div id="cuadroMoneda">
+            <p id="textoJuego">No podras salir de la cueva a no ser que adivines la contraseña, hahaha</br> Una pista, es un numero de dos digitos...</p>
+            <input id="numeroIngresado" type="number"></input>
+            <button id="probarContrasena" type="submit">Try</button>
+        </div>
+
+
+
+    
+</div>
+
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+<!-- Jquery-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Final!-->
+</script defer>
+<script src="js/final.js">
+</script>
+
+<!-- </script defer>
+<script src="js/clase8.js">
+</script> -->
+
+<!-- </script defer>
+<script src="js/prueba.js">
+</script> -->
+</body>
+</html>

@@ -1,0 +1,538 @@
+@import "base/mixin";
+
+$colors: rgb(198, 163, 8), rgb(78, 68, 27), rgb(45, 115, 26), rgb(0, 32, 4),
+  rgb(255, 51, 0);
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+
+  .primerFondo {
+    background-image: url("../images/primerFondo.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    padding: 0;
+  }
+
+  .segundoFondo {
+    background-image: url("../images/segundoFondo.jpg");
+    background-size: cover;
+    background-attachment: scroll;
+    padding: 0;
+  }
+
+  #cuadroPsico {
+    display: none;
+
+    position: absolute;
+    z-index: 1;
+    background-image: url("../images/animation.gif");
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .chauChau {
+    display: none;
+  }
+
+  // BOTONES Y CUADROS CON FONDO DE NUBE
+  #botonSalir {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #000;
+    font-weight: 600;
+    border: transparent;
+
+    background-color: transparent;
+    background-image: url("../images/cloud.png");
+    background-position: center;
+    background-size: cover;
+    opacity: 40%;
+
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 100%;
+      width: 15em;
+      height: 9em;
+      font-size: 130%;
+    }
+  }
+
+  #cuadroNube {
+    position: absolute;
+    background-color: transparent;
+    background-image: url("../images/cloud.png");
+    background-position: center;
+    background-size: contain;
+
+    width: 40em;
+    height: 25em;
+    align-items: center;
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 10em;
+
+    color: rgb(230, 230, 230);
+
+    p {
+      font-size: 1.5em;
+      font-weight: 500;
+      text-align: center;
+      text-shadow: 2px 2px 2px #000;
+    }
+    #botonCerrarNube {
+      position: absolute;
+      bottom: 6em;
+      right: 8em;
+
+      padding-bottom: 0.3em;
+
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px #000;
+      font-weight: 600;
+
+      background-color: transparent;
+      background-image: url("../images/gota.png");
+      background-position: center;
+      background-size: cover;
+
+      border: transparent;
+
+      height: 4em;
+      width: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(250%);
+      }
+    }
+    #botonCerrarNube2 {
+      position: absolute;
+      bottom: 6em;
+      right: 8em;
+
+      padding-bottom: 0.3em;
+
+      color: rgb(255, 255, 255);
+      text-shadow: 1px 1px #000;
+      font-weight: 600;
+
+      background-color: transparent;
+      background-image: url("../images/gota.png");
+      background-position: center;
+      background-size: cover;
+
+      border: transparent;
+
+      height: 4em;
+      width: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: 0.5s;
+
+      &:hover {
+        transform: scale(250%);
+      }
+    }
+  }
+
+  .apareceBotonSalir {
+    width: 10em;
+    height: 5em;
+    display: block;
+    position: absolute;
+    top: 3em;
+    left: 3em;
+  }
+
+  .apareceReloj {
+    position: absolute;
+    display: flex;
+    top: 3em;
+    right: 3em;
+  }
+
+  //Reloj en vivo ;)
+  #clockdate {
+    background-color: transparent;
+    background-image: url("../images/cloud.png");
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+
+    width: 10em;
+    height: 5em;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    position: absolute;
+    display: flex;
+    top: 3em;
+    right: 3em;
+
+    align-items: center;
+    justify-content: center;
+
+    opacity: 40%;
+
+    transition: 0.5s;
+
+    &:hover {
+      opacity: 100%;
+      width: 15em;
+      height: 9em;
+      font-size: 130%;
+    }
+
+    .clockdate-wrapper {
+      margin: 1em;
+      width: 100%;
+      text-align: center;
+    }
+    #clock {
+      font-size: 2em;
+      color: rgb(255, 255, 255);
+      text-shadow: 2px 2px #000;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    #clock span {
+      color: rgb(213, 213, 213);
+      text-shadow: 0 0 2px rgb(0, 0, 0);
+      font-size: 0.5em;
+      position: relative;
+      top: -0.5em;
+    }
+    #date {
+      font-size: 0.7em;
+      color: #fff;
+      margin-top: -0.5em;
+      text-shadow: 0 0 2px rgb(0, 0, 0);
+      white-space: nowrap;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0.5em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 0.5em 0 0.5em;
+
+      @include letraBrillante(2em, (nth($colors, 1)));
+      z-index: 1;
+    }
+
+    .main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+
+      .segundaPantalla {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cuadroLampara {
+        display: flex;
+        align-items: center;
+
+        ul {
+          list-style-type: none;
+          font-size: 1.5em;
+          text-align: left;
+        }
+      }
+
+      .miniTexto {
+        font-size: 0.8em;
+        font-weight: 700;
+
+        animation: move linear 2000ms infinite;
+        @media (min-width: 768px) {
+          font-size: 1em;
+        }
+
+        @keyframes move {
+          0% {
+            text-shadow: 4px -4px 0 (nth($colors, 1)),
+              3px -3px 0 (nth($colors, 1)), 2px -2px 0 (nth($colors, 1)),
+              1px -1px 0 (nth($colors, 1)), -4px 4px 0 (nth($colors, 3)),
+              -3px 3px 0 (nth($colors, 3)), -2px 2px 0 (nth($colors, 3)),
+              -1px 1px 0 (nth($colors, 3));
+          }
+          25% {
+            text-shadow: -4px -4px 0 (nth($colors, 3)),
+              -3px -3px 0 (nth($colors, 3)), -2px -2px 0 (nth($colors, 3)),
+              -1px -1px 0 (nth($colors, 3)), 4px 4px 0 (nth($colors, 1)),
+              3px 3px 0 (nth($colors, 1)), 2px 2px 0 (nth($colors, 1)),
+              1px 1px 0 (nth($colors, 1));
+          }
+          50% {
+            text-shadow: -4px 4px 0 (nth($colors, 1)),
+              -3px 3px 0 (nth($colors, 1)), -2px 2px 0 (nth($colors, 1)),
+              -1px 1px 0 (nth($colors, 1)), 4px -4px 0 (nth($colors, 3)),
+              3px -3px 0 (nth($colors, 3)), 2px -2px 0 (nth($colors, 3)),
+              1px -1px 0 (nth($colors, 3));
+          }
+          75% {
+            text-shadow: 4px 4px 0 (nth($colors, 3)),
+              3px 3px 0 (nth($colors, 3)), 2px 2px 0 hs (nth($colors, 3)),
+              1px 1px 0 (nth($colors, 3)), -4px -4px 0 (nth($colors, 1)),
+              -3px -3px 0 (nth($colors, 1)), -2px -2px 0 (nth($colors, 1)),
+              -1px -1px 0 (nth($colors, 1));
+          }
+          100% {
+            text-shadow: 4px -4px 0 (nth($colors, 1)),
+              3px -3px 0 (nth($colors, 1)), 2px -2px 0 (nth($colors, 1)),
+              1px -1px 0 (nth($colors, 1)), -4px 4px 0 (nth($colors, 3)),
+              -3px 3px 0 (nth($colors, 3)), -2px 2px 0 (nth($colors, 3)),
+              -1px 1px 0 (nth($colors, 3));
+          }
+        }
+      }
+
+      .lampara {
+        width: 0em;
+        height: auto;
+      }
+
+      .lampara2 {
+        width: 35em;
+        opacity: 70%;
+        position: fixed;
+        top: 12em;
+        left: 8em;
+
+        z-index: -1;
+      }
+
+      .dialogo {
+        @include cuadroDialogo;
+        @include cuadroBrillante((nth($colors, 3)));
+
+        background-blend-mode: difference;
+      }
+
+      .dialogo2 {
+        position: absolute;
+        top: 10em;
+      }
+      .dialogo3 {
+        @include cuadroBrillante((nth($colors, 5)));
+      }
+
+      #cuadroMoneda {
+        background-color: transparent;
+        background-image: url("../images/coin.png");
+        background-position: center;
+        background-size: cover;
+
+        width: 30em;
+        height: 30em;
+        position: absolute;
+
+        overflow: hidden;
+
+        display: none;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          width: 15em;
+          color: rgb(140, 105, 8);
+          font-weight: 700;
+          margin-top: 1em;
+        }
+        input {
+          position: absolute;
+          bottom: 8em;
+          border-radius: 25em;
+          border: 1px solid #a55d07;
+
+          text-align: center;
+
+          width: 5em;
+        }
+        button {
+          position: absolute;
+          bottom: 3.5em;
+
+          width: 4em;
+          height: 4em;
+
+          display: inline-block;
+          box-sizing: border-box;
+          border: none;
+          border-radius: 25em;
+          line-height: 2em;
+          text-transform: uppercase;
+          font-weight: 800;
+
+          margin-top: 0.5em;
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(110, 80, 20, 0.4),
+            inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+            inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+          background-image: linear-gradient(
+            160deg,
+            #a54e07,
+            #b47e11,
+            #fef1a2,
+            #bc881b,
+            #a54e07
+          );
+          border: 1px solid #a55d07;
+          color: rgb(120, 50, 5);
+          text-shadow: 0 2px 2px rgba(250, 227, 133, 1);
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          background-size: 100% 100%;
+          background-position: center;
+
+          &:hover {
+            background-size: 150% 150%;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+              0 6px 6px rgba(0, 0, 0, 0.23), inset 0 -2px 5px 1px #b17d10,
+              inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+            border: 1px solid rgba(165, 93, 7, 0.6);
+            color: rgba(120, 50, 5, 0.8);
+          }
+        }
+      }
+    }
+
+    .primerPantalla {
+      flex-direction: column;
+      align-items: center;
+
+      @include cuadroDialogo;
+      @include cuadroBrillante(black);
+
+      .inputPrimerPantalla {
+        flex-direction: row;
+        padding-bottom: 1em;
+      }
+
+      h2 {
+        @include letraBrillante(1em, (nth($colors, 4)));
+      }
+    }
+
+    .pantallaEmergente {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      position: absolute;
+      bottom: 5em;
+
+      width: 10em;
+      height: 7em;
+
+      p {
+        margin: 0 1em 0 1em;
+        font-weight: 500;
+      }
+      input {
+        height: 1.5em;
+      }
+
+      @include cuadroDialogo;
+      @include cuadroBrillante(black);
+
+      .botonContinuar {
+        background-color: transparent;
+        background-image: url("../images/gota.png");
+        background-position: center;
+        background-size: cover;
+
+        border: transparent;
+        color: white;
+        font-weight: 500;
+
+        height: 4em;
+        width: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        right: 1em;
+
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(130%);
+        }
+      }
+
+      .botonSi {
+        background-color: transparent;
+        background-image: url("../images/gota.png");
+        background-position: auto;
+        background-size: contain;
+
+        border: transparent;
+        color: white;
+        font-weight: 500;
+
+        height: 4em;
+        width: 4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        left: 1em;
+
+        transition: 0.5s;
+
+        &:hover {
+          transform: scale(130%);
+        }
+      }
+    }
+  }
+}

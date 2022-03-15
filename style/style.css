@@ -1,0 +1,464 @@
+html {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+}
+html .primerFondo {
+  background-image: url("../images/primerFondo.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 0;
+}
+html .segundoFondo {
+  background-image: url("../images/segundoFondo.jpg");
+  background-size: cover;
+  background-attachment: scroll;
+  padding: 0;
+}
+html #cuadroPsico {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-image: url("../images/animation.gif");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+html .chauChau {
+  display: none;
+}
+html #botonSalir {
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 600;
+  border: transparent;
+  background-color: transparent;
+  background-image: url("../images/cloud.png");
+  background-position: center;
+  background-size: cover;
+  opacity: 40%;
+  transition: 0.5s;
+}
+html #botonSalir:hover {
+  opacity: 100%;
+  width: 15em;
+  height: 9em;
+  font-size: 130%;
+}
+html #cuadroNube {
+  position: absolute;
+  background-color: transparent;
+  background-image: url("../images/cloud.png");
+  background-position: center;
+  background-size: contain;
+  width: 40em;
+  height: 25em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10em;
+  color: #e6e6e6;
+}
+html #cuadroNube p {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 2px 2px #000;
+}
+html #cuadroNube #botonCerrarNube {
+  position: absolute;
+  bottom: 6em;
+  right: 8em;
+  padding-bottom: 0.3em;
+  color: white;
+  text-shadow: 1px 1px #000;
+  font-weight: 600;
+  background-color: transparent;
+  background-image: url("../images/gota.png");
+  background-position: center;
+  background-size: cover;
+  border: transparent;
+  height: 4em;
+  width: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+html #cuadroNube #botonCerrarNube:hover {
+  transform: scale(250%);
+}
+html #cuadroNube #botonCerrarNube2 {
+  position: absolute;
+  bottom: 6em;
+  right: 8em;
+  padding-bottom: 0.3em;
+  color: white;
+  text-shadow: 1px 1px #000;
+  font-weight: 600;
+  background-color: transparent;
+  background-image: url("../images/gota.png");
+  background-position: center;
+  background-size: cover;
+  border: transparent;
+  height: 4em;
+  width: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+html #cuadroNube #botonCerrarNube2:hover {
+  transform: scale(250%);
+}
+html .apareceBotonSalir {
+  width: 10em;
+  height: 5em;
+  display: block;
+  position: absolute;
+  top: 3em;
+  left: 3em;
+}
+html .apareceReloj {
+  position: absolute;
+  display: flex;
+  top: 3em;
+  right: 3em;
+}
+html #clockdate {
+  background-color: transparent;
+  background-image: url("../images/cloud.png");
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  width: 10em;
+  height: 5em;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  top: 3em;
+  right: 3em;
+  align-items: center;
+  justify-content: center;
+  opacity: 40%;
+  transition: 0.5s;
+}
+html #clockdate:hover {
+  opacity: 100%;
+  width: 15em;
+  height: 9em;
+  font-size: 130%;
+}
+html #clockdate .clockdate-wrapper {
+  margin: 1em;
+  width: 100%;
+  text-align: center;
+}
+html #clockdate #clock {
+  font-size: 2em;
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-weight: 600;
+  white-space: nowrap;
+}
+html #clockdate #clock span {
+  color: #d5d5d5;
+  text-shadow: 0 0 2px black;
+  font-size: 0.5em;
+  position: relative;
+  top: -0.5em;
+}
+html #clockdate #date {
+  font-size: 0.7em;
+  color: #fff;
+  margin-top: -0.5em;
+  text-shadow: 0 0 2px black;
+  white-space: nowrap;
+}
+html body {
+  margin: 0;
+  padding: 0.5em;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+html body h1 {
+  margin: 0;
+  padding: 0.5em 0 0.5em;
+  margin: 0;
+  color: #fff;
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 30px #c6a308, 0 0 70px #c6a308, 0 0 80px #c6a308, 0 0 100px #c6a308, 0 0 140px #c6a308;
+  text-transform: uppercase;
+  font-weight: 700;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  html body h1 {
+    font-size: 4em;
+    padding-bottom: 0.5em;
+  }
+}
+html body .main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+html body .main .segundaPantalla {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html body .main .cuadroLampara {
+  display: flex;
+  align-items: center;
+}
+html body .main .cuadroLampara ul {
+  list-style-type: none;
+  font-size: 1.5em;
+  text-align: left;
+}
+html body .main .miniTexto {
+  font-size: 0.8em;
+  font-weight: 700;
+  animation: move linear 2000ms infinite;
+}
+@media (min-width: 768px) {
+  html body .main .miniTexto {
+    font-size: 1em;
+  }
+}
+@keyframes move {
+  0% {
+    text-shadow: 4px -4px 0 #c6a308, 3px -3px 0 #c6a308, 2px -2px 0 #c6a308, 1px -1px 0 #c6a308, -4px 4px 0 #2d731a, -3px 3px 0 #2d731a, -2px 2px 0 #2d731a, -1px 1px 0 #2d731a;
+  }
+  25% {
+    text-shadow: -4px -4px 0 #2d731a, -3px -3px 0 #2d731a, -2px -2px 0 #2d731a, -1px -1px 0 #2d731a, 4px 4px 0 #c6a308, 3px 3px 0 #c6a308, 2px 2px 0 #c6a308, 1px 1px 0 #c6a308;
+  }
+  50% {
+    text-shadow: -4px 4px 0 #c6a308, -3px 3px 0 #c6a308, -2px 2px 0 #c6a308, -1px 1px 0 #c6a308, 4px -4px 0 #2d731a, 3px -3px 0 #2d731a, 2px -2px 0 #2d731a, 1px -1px 0 #2d731a;
+  }
+  75% {
+    text-shadow: 4px 4px 0 #2d731a, 3px 3px 0 #2d731a, 2px 2px 0 hs #2d731a, 1px 1px 0 #2d731a, -4px -4px 0 #c6a308, -3px -3px 0 #c6a308, -2px -2px 0 #c6a308, -1px -1px 0 #c6a308;
+  }
+  100% {
+    text-shadow: 4px -4px 0 #c6a308, 3px -3px 0 #c6a308, 2px -2px 0 #c6a308, 1px -1px 0 #c6a308, -4px 4px 0 #2d731a, -3px 3px 0 #2d731a, -2px 2px 0 #2d731a, -1px 1px 0 #2d731a;
+  }
+}
+html body .main .lampara {
+  width: 0em;
+  height: auto;
+}
+html body .main .lampara2 {
+  width: 35em;
+  opacity: 70%;
+  position: fixed;
+  top: 12em;
+  left: 8em;
+  z-index: -1;
+}
+html body .main .dialogo {
+  margin-top: 1em;
+  padding: 1em 1em 1em;
+  border: 0.3em inset #c9a77a;
+  border-radius: 1em;
+  text-align: center;
+  display: flex;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px #2d731a, 0 0 60px #2d731a, 0 0 60px #2d731a, 0 0 80px #2d731a, 0 0 100px #2d731a;
+  background-blend-mode: difference;
+}
+@media (min-width: 768px) {
+  html body .main .dialogo {
+    width: 55%;
+  }
+}
+html body .main .dialogo2 {
+  position: absolute;
+  top: 10em;
+}
+html body .main .dialogo3 {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px #ff3300, 0 0 60px #ff3300, 0 0 60px #ff3300, 0 0 80px #ff3300, 0 0 100px #ff3300;
+}
+html body .main #cuadroMoneda {
+  background-color: transparent;
+  background-image: url("../images/coin.png");
+  background-position: center;
+  background-size: cover;
+  width: 30em;
+  height: 30em;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+html body .main #cuadroMoneda p {
+  width: 15em;
+  color: #8c6908;
+  font-weight: 700;
+  margin-top: 1em;
+}
+html body .main #cuadroMoneda input {
+  position: absolute;
+  bottom: 8em;
+  border-radius: 25em;
+  border: 1px solid #a55d07;
+  text-align: center;
+  width: 5em;
+}
+html body .main #cuadroMoneda button {
+  position: absolute;
+  bottom: 3.5em;
+  width: 4em;
+  height: 4em;
+  display: inline-block;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 25em;
+  line-height: 2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 0.5em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px #8b4208, inset 0 -1px 1px 3px #fae385;
+  background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+  border: 1px solid #a55d07;
+  color: #783205;
+  text-shadow: 0 2px 2px #fae385;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-size: 100% 100%;
+  background-position: center;
+}
+html body .main #cuadroMoneda button:hover {
+  background-size: 150% 150%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23), inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px #fae385;
+  border: 1px solid rgba(165, 93, 7, 0.6);
+  color: rgba(120, 50, 5, 0.8);
+}
+html body .primerPantalla {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  padding: 1em 1em 1em;
+  border: 0.3em inset #c9a77a;
+  border-radius: 1em;
+  text-align: center;
+  display: flex;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px black, 0 0 60px black, 0 0 60px black, 0 0 80px black, 0 0 100px black;
+}
+@media (min-width: 768px) {
+  html body .primerPantalla {
+    width: 55%;
+  }
+}
+html body .primerPantalla .inputPrimerPantalla {
+  flex-direction: row;
+  padding-bottom: 1em;
+}
+html body .primerPantalla h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1em;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 30px #002004, 0 0 70px #002004, 0 0 80px #002004, 0 0 100px #002004, 0 0 140px #002004;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  html body .primerPantalla h2 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+  }
+}
+html body .pantallaEmergente {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 5em;
+  width: 10em;
+  height: 7em;
+  margin-top: 1em;
+  padding: 1em 1em 1em;
+  border: 0.3em inset #c9a77a;
+  border-radius: 1em;
+  text-align: center;
+  display: flex;
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 25px black, 0 0 60px black, 0 0 60px black, 0 0 80px black, 0 0 100px black;
+}
+html body .pantallaEmergente p {
+  margin: 0 1em 0 1em;
+  font-weight: 500;
+}
+html body .pantallaEmergente input {
+  height: 1.5em;
+}
+@media (min-width: 768px) {
+  html body .pantallaEmergente {
+    width: 55%;
+  }
+}
+html body .pantallaEmergente .botonContinuar {
+  background-color: transparent;
+  background-image: url("../images/gota.png");
+  background-position: center;
+  background-size: cover;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+  height: 4em;
+  width: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1em;
+  transition: 0.5s;
+}
+html body .pantallaEmergente .botonContinuar:hover {
+  transform: scale(130%);
+}
+html body .pantallaEmergente .botonSi {
+  background-color: transparent;
+  background-image: url("../images/gota.png");
+  background-position: auto;
+  background-size: contain;
+  border: transparent;
+  color: white;
+  font-weight: 500;
+  height: 4em;
+  width: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1em;
+  transition: 0.5s;
+}
+html body .pantallaEmergente .botonSi:hover {
+  transform: scale(130%);
+}
+
+/*# sourceMappingURL=style.css.map */
